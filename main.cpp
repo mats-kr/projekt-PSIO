@@ -31,14 +31,14 @@ private:
 
 
 };
-
+//klasa odpowiadająca za pojazdy
 class car
 {
 
 
     public:
 
-        hero(const sf::Vector2f &size,const sf::Vector2f &position);
+        car(const sf::Vector2f &size,const sf::Vector2f &position);
 
         void setSpeed(int speed_x);
         void move();
