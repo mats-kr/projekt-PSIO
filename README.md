@@ -20,7 +20,7 @@ Na poniższym przykładzie gracz jest oznaczony jako "strzałka"
 
 Każdy pas będzie zapisany jako kolejny krok,prędkość samochodów będzie 2-3 razy większa od prędkości bohatera(wartość ta będzie wzrastać wraz z kolejnymi poziomami,oczywiście tak aby rozgrywka była możliwa)
 
-Pojazdy specjalne które miały się pojawiać losowo będą zapisane tak jak zwykłe(obecne od początku gry oraz poruszające się wraz z innymi) lecz ich prędkość będzie znacznie większa od pozostałych(4-5 razy).
+Pojazdy specjalne które miały się pojawiać losowo będą zapisane tak jak zwykłe(obecne od początku gry oraz poruszające się wraz z innymi,przewiduje obecność pojazdu specjalnego na tym samym pasie co zwykły lecz pojazdy te nie będą ze soba kolidować,lecz "przechodzić" jeden przez drugi) ich prędkość będzie znacznie większa od zwykłych pojazdów(4-5 razy).
 
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy. 
 
