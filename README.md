@@ -26,4 +26,4 @@ Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
 
 
 
-![](20%makieta.png)
+![](makieta.PNG)
