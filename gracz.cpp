@@ -17,6 +17,35 @@ void gracz::Color(sf::Color (col))
 {
     setFillColor(col);
 }
+void gracz::Zycia(sf::RenderWindow &wind)
+{
+    zycia--;
+    std::cout<<zycia<<std::endl;
+    if(zycia<=0)
+    {
+        wind.close();
+        std::cout<<"KONIEC GRY"<<std::endl;
+    }
+
+
+}
+void gracz::kolizja_dol(sf::RectangleShape obiekt,sf::RenderWindow &wind)
+{
+    if(Give_Bounds().intersects(obiekt.getGlobalBounds()))
+    {
+        Zycia(wind);
+        setPosition(sf::Vector2f(450,750));
+    }
+}
+void gracz::kolizja_gora(sf::RectangleShape obiekt,sf::RenderWindow &wind)
+{
+    if(Give_Bounds().intersects(obiekt.getGlobalBounds()))
+    {
+        Zycia(wind);
+        setPosition(sf::Vector2f(450,750/2));
+
+    }
+}
 void gracz::Bounds(const int& top,const int& bottom ,const int &left ,const  int& right)
 {
     left_bound = left;
@@ -34,19 +63,39 @@ void gracz::Animate()
 {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)||sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
-        if(Give_Bounds().top >= top_bound){move(0,(-speed.y));}  
+        if(Give_Bounds().top >= top_bound)
+        {
+            //            move(0,(-speed.y));
+            setPosition(getPosition().x,getPosition().y-7);
+
+        }
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)||sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        if(Give_Bounds().left >= left_bound){move(-speed.x,0);}
+        if(Give_Bounds().left >= left_bound)
+        {
+            //            move(-speed.x,0);
+            setPosition(getPosition().x-7,getPosition().y);
+
+        }
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)||sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
-        if(Give_Bounds().top+Give_Bounds().height<=bottom_bound ){move(0, speed.y);}
+        if(Give_Bounds().top+Give_Bounds().height<=bottom_bound )
+        {
+            //            move(0, speed.y);
+            setPosition(getPosition().x,getPosition().y+7);
+
+        }
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)||sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        if(Give_Bounds().left+Give_Bounds().width<=right_bound){move(speed.x,0);}
+        if(Give_Bounds().left+Give_Bounds().width<=right_bound)
+        {
+            //            move(speed.x,0);
+            setPosition(getPosition().x+7,getPosition().y);
+
+        }
     }
 
 }

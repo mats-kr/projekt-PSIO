@@ -7,8 +7,6 @@
 #include <SFML/Audio.hpp>
 class elementysceny:public sf::RectangleShape
 {
-
-
 public:
     elementysceny(const sf::Vector2f &position);
     void Size(int x,int y);
@@ -19,4 +17,3 @@ public:
 };
 
 #endif // ELEMENTYSCENY_H
-
