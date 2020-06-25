@@ -5,15 +5,20 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-class elementysceny:public sf::RectangleShape
+#include"sprite.h"
+class elementysceny:public sprite
 {
+
 public:
-    elementysceny(const sf::Vector2f &position);
+   explicit elementysceny(const sf::Vector2f &position);
     void Size(int x,int y);
     void Color(sf::Color(col));
-    void Bounds(const int &left, const int& right, const int& top,const int& bottom);
-
     sf::FloatRect Give_Bounds();
+
+    //    void setposition()
+    void Set_Bounds(const int& left,const int& right,const int& top,const int& bottom);
+    void New_Position(const int& w);
+
 };
 
 #endif // ELEMENTYSCENY_H

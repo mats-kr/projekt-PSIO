@@ -1,26 +1,14 @@
 #include "gracz.h"
 
-gracz::gracz(const sf::Vector2f &position)
+gracz::gracz(const sf::Vector2f &position):sprite(position)
 {
     setPosition(position);
 }
-void gracz::Set_Speed(const int &speed_x, const int& speed_y)
-{
-    speed.x= speed_x;
-    speed.y = speed_y;
-}
-void gracz::Size(int x, int y)
-{
-    setSize(sf::Vector2f(x,y));
-}
-void gracz::Color(sf::Color (col))
-{
-    setFillColor(col);
-}
+
 void gracz::Zycia(sf::RenderWindow &wind)
 {
     zycia--;
-    std::cout<<zycia<<std::endl;
+
     if(zycia<=0)
     {
         wind.close();
@@ -29,12 +17,25 @@ void gracz::Zycia(sf::RenderWindow &wind)
 
 
 }
+void gracz::Lives(sf::RenderWindow &wind)
+{
+    font.loadFromFile("Fonts/I-pixel-u.ttf");
+
+    std::string s = std::to_string(zycia);
+    text.setString(s);
+    text.setFont(font);
+
+    text.setPosition(850,20);
+    text.setCharacterSize(24);
+    text.setFillColor(sf::Color::Black);
+    wind.draw(text);
+}
 void gracz::kolizja_dol(sf::RectangleShape obiekt,sf::RenderWindow &wind)
 {
     if(Give_Bounds().intersects(obiekt.getGlobalBounds()))
     {
         Zycia(wind);
-        setPosition(sf::Vector2f(450,750));
+        setPosition(sf::Vector2f(450,900));
     }
 }
 void gracz::kolizja_gora(sf::RectangleShape obiekt,sf::RenderWindow &wind)
@@ -42,22 +43,52 @@ void gracz::kolizja_gora(sf::RectangleShape obiekt,sf::RenderWindow &wind)
     if(Give_Bounds().intersects(obiekt.getGlobalBounds()))
     {
         Zycia(wind);
-        setPosition(sf::Vector2f(450,750/2));
+        setPosition(sf::Vector2f(450,900/2));
 
     }
 }
-void gracz::Bounds(const int& top,const int& bottom ,const int &left ,const  int& right)
+void gracz::kolizja_specjalny(sf::RectangleShape obiekt)
 {
-    left_bound = left;
-    right_bound = right;
-    top_bound = top;
-    bottom_bound = bottom;
-}
+    if(Give_Bounds().intersects(obiekt.getGlobalBounds()))
+    {
 
-sf::FloatRect gracz::Give_Bounds()
-{
-    sf::FloatRect bound = getGlobalBounds();
-    return bound;
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)||sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+        {
+            if(Give_Bounds().top >= top_bound)
+            {
+                //            move(0,(-speed.y));
+                setPosition(getPosition().x,getPosition().y+7);
+
+            }
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)||sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+        {
+            if(Give_Bounds().left >= left_bound)
+            {
+                //            move(-speed.x,0);
+                setPosition(getPosition().x+7,getPosition().y);
+
+            }
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)||sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+        {
+            if(Give_Bounds().top+Give_Bounds().height<=bottom_bound )
+            {
+                //            move(0, speed.y);
+                setPosition(getPosition().x,getPosition().y-7);
+
+            }
+        }
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)||sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+        {
+            if(Give_Bounds().left+Give_Bounds().width<=right_bound)
+            {
+                //            move(speed.x,0);
+                setPosition(getPosition().x-7,getPosition().y);
+
+            }
+        }
+    }
 }
 void gracz::Animate()
 {

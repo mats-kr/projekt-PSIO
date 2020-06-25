@@ -7,8 +7,8 @@
 #include<iostream>
 #include <string>
 #include <ctime>
-
-class Pojazd: public sf::RectangleShape
+#include"sprite.h"
+class Pojazd: public sprite
 {
 private:
     sf::Vector2f speed;
@@ -20,15 +20,11 @@ private:
     sf::Clock time;
 public:
     Pojazd(const sf::Vector2f &position);
-    void Set_Bounds(const int& left,const int& right,const int& top,const int& bottom);
-    void Set_Speed( const int& speedY, const int& speedX);
-    void New_Position(const int& w);
-    void Size(int x,int y);
     void lvl();
+    void Start();
     void lvl2();
-    void Color(sf::Color(col));
     void Animate();//const int& h,const int& w);
-    sf::FloatRect Give_Bounds();
+
 
 };
 

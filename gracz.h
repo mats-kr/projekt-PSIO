@@ -4,28 +4,23 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-class gracz:public sf::RectangleShape
+#include"sprite.h"
+class gracz :public sprite
 {
-    sf::Vector2f speed;
     sf::Texture tex;
-    int left_bound;
-    int right_bound;
-    int top_bound;
     int zycia=10;
-    int bottom_bound;
+    sf::Font font;
+    sf::Text text;
+
 public:
     gracz(const sf::Vector2f &position);
     void Animate();
-    void Set_Speed(const int& speed_x,const int& speed_y);
     //    void setposition();
     void kolizja_dol(sf::RectangleShape obiekt,sf::RenderWindow &wind);
     void kolizja_gora(sf::RectangleShape obiekt,sf::RenderWindow &wind);
-    void Size(int x,int y);
+    void  kolizja_specjalny(sf::RectangleShape obiekt);
     void Zycia(sf::RenderWindow &wind);
-    void Color(sf::Color(col));
-    void Bounds(const int &left, const int& right, const int& top,const int& bottom);
-
-    sf::FloatRect Give_Bounds();
+    void Lives(sf::RenderWindow &wind);
     void reversemove();
 };
 
