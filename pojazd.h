@@ -11,19 +11,18 @@
 class Pojazd: public sprite
 {
 private:
-    sf::Vector2f speed;
-    bool is_selected_ = false;
-    int left_bound;
-    int right_bound;
-    int top_bound;
-    int bottom_bound;
-    sf::Clock time;
+    std::string texturePath = "car_2.PNG";
+
+    int Y;
 public:
     Pojazd(const sf::Vector2f &position);
-    void lvl();
     void Start();
-    void lvl2();
-    void Animate();//const int& h,const int& w);
+    void lvl(sf::RenderWindow&wind) final;
+    void lvl2() final;
+    void tex();
+    void New_Position()final;
+
+    void Animate()final;//const int& h,const int& w);
 
 
 };

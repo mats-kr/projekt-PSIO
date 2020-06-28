@@ -10,11 +10,11 @@
 class pojazdspecjalny:public sprite
 {
 
-    sf::Clock time;
 public:
-    pojazdspecjalny(const sf::Vector2f &position);
-    void New_Position(const int& w);
-    void Animate();//const int& h,const int& w);
+   explicit pojazdspecjalny(const sf::Vector2f &position);
+    void New_Position()final;
+
+    void Animate()final;//const int& h,const int& w);
 
 
 };

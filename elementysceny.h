@@ -10,14 +10,14 @@ class elementysceny:public sprite
 {
 
 public:
-   explicit elementysceny(const sf::Vector2f &position);
-    void Size(int x,int y);
-    void Color(sf::Color(col));
-    sf::FloatRect Give_Bounds();
+    explicit elementysceny(const sf::Vector2f &position);
+     void lvl(sf::RenderWindow&wind);
+    void lvl2();
+     void Animate();
+     void New_Position()final;
 
-    //    void setposition()
-    void Set_Bounds(const int& left,const int& right,const int& top,const int& bottom);
-    void New_Position(const int& w);
+
+
 
 };
 

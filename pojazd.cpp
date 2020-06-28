@@ -3,11 +3,27 @@
 
 Pojazd::Pojazd(const sf::Vector2f &position):sprite(position)
 {
-    setPosition(position);
+    loadTexture(texturePath);
 }
 
 
-void Pojazd::lvl()
+
+
+void Pojazd::Animate()
+{
+
+    move(speed.x,0);
+    sf::FloatRect rectangle_bounds = getGlobalBounds();
+
+    if(rectangle_bounds.left+rectangle_bounds.width >= 900.0)
+    {
+        setPosition(-(std::rand()%400+0),getPosition().y);
+        std::cout<<getPosition().x<<std::endl;
+
+    }
+
+}
+void Pojazd::lvl(sf::RenderWindow&wind)
 {
 
     std::abs(speed.x++);
@@ -16,29 +32,20 @@ void Pojazd::lvl()
 void Pojazd::lvl2()
 {
 
-    std::abs(speed.x--);
-    std::cout<<speed.x<<" dol"<<std::endl;
 }
-void Pojazd::Start()
-{
-    if(event.type==sf::Keyboard::isKeyPressed(sf::Keyboard::P))
-    {
-        speed.x--;
-    }
-}
-void Pojazd::Animate()
+
+
+
+
+void Pojazd::New_Position()//sf::RenderWindow&wind)
 {
 
-    move(speed.x,0);
-    sf::FloatRect rectangle_bounds = getGlobalBounds();
-    if(rectangle_bounds.left <=0.0)
-    {
-        setPosition(800.0,getPosition().y);
-    }
-    if(rectangle_bounds.left+rectangle_bounds.width >= 900.0)
-    {
-        setPosition(0.0,getPosition().y);
 
-    }
+
+
+
+
+
+
 
 }

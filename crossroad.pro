@@ -8,6 +8,7 @@ SOURCES += \
         gracz.cpp \
         main.cpp \
         pojazd.cpp \
+        pojazd2.cpp \
         pojazdspecjalny.cpp \
         score.cpp \
         sprite.cpp
@@ -25,6 +26,7 @@ HEADERS += \
     elementysceny.h \
     gracz.h \
     pojazd.h \
+    pojazd2.h \
     pojazdspecjalny.h \
     score.h \
     sprite.h
