@@ -15,9 +15,9 @@ void Pojazd::Animate()
     move(speed.x,0);
     sf::FloatRect rectangle_bounds = getGlobalBounds();
 
-    if(rectangle_bounds.left+rectangle_bounds.width >= 900.0)
+    if(rectangle_bounds.left+rectangle_bounds.width >= 1000.0)
     {
-        setPosition(-(std::rand()%400+0),getPosition().y);
+        setPosition(-(std::rand()%600+0),getPosition().y);
         std::cout<<getPosition().x<<std::endl;
 
     }
@@ -49,3 +49,5 @@ void Pojazd::New_Position()//sf::RenderWindow&wind)
 
 
 }
+
+

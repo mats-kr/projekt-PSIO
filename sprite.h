@@ -4,6 +4,8 @@
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
 #include<iostream>
 #include <string>
 #include <ctime>
@@ -11,6 +13,8 @@
 class sprite: public sf::Sprite
 {
 protected:
+    int LVL=1;
+
     sf::Vector2f speed;
     int left_bound;
     int right_bound;
@@ -21,6 +25,8 @@ protected:
     sf::Event event;
     sf::Font font;
     sf::Text text;
+    sf::Music ms;
+
     void loadTexture(const std::string &path);
 
 
@@ -34,10 +40,11 @@ public:
     virtual void lvl2()=0;
     //    virtual void InitFont();
     //    virtual void InitText();
+    void time_r();
     virtual void Color(sf::Color(col));
     sf::FloatRect Give_Bounds();
     bool ObjectCollision(const sf::Sprite &object,const sf::RenderWindow &wind);
-
+void Theme();
     virtual void Animate()=0;
     //    virtual void ReverseMove();
 

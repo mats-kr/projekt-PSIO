@@ -10,7 +10,7 @@
 #include"sprite.h"
 class Pojazd2: public sprite
 {
-    std::string texturePath = "car_l.PNG";
+    std::string texturePath = "redcar.PNG";
 
 public:
    explicit Pojazd2(const sf::Vector2f &position);

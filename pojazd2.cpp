@@ -11,7 +11,7 @@ void Pojazd2::Animate()
 
     move(speed.x,0);
     sf::FloatRect rectangle_bounds = getGlobalBounds();
-    if(rectangle_bounds.left <=0.0)
+    if(rectangle_bounds.left <=-100.0)
     {
           setPosition(std::rand()%300+900,getPosition().y);
           //std::cout<<getPosition().x<<std::endl;

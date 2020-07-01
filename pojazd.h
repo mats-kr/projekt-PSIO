@@ -11,7 +11,7 @@
 class Pojazd: public sprite
 {
 private:
-    std::string texturePath = "car_2.PNG";
+    std::string texturePath = "greencar.PNG";
 
     int Y;
 public:

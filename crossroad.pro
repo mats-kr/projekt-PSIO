@@ -10,6 +10,7 @@ SOURCES += \
         pojazd.cpp \
         pojazd2.cpp \
         pojazdspecjalny.cpp \
+        pojazdspecjalny2.cpp \
         score.cpp \
         sprite.cpp
         INCLUDEPATH +="C:/Users/User/Desktop/x/lab10/SFML-2.5.1/include"
@@ -28,5 +29,6 @@ HEADERS += \
     pojazd.h \
     pojazd2.h \
     pojazdspecjalny.h \
+    pojazdspecjalny2.h \
     score.h \
     sprite.h

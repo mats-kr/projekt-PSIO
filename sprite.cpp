@@ -1,4 +1,6 @@
 #include "sprite.h"
+#include <SFML/Audio.hpp>
+
 
 sprite::sprite(const sf::Vector2f &position)
 {
@@ -6,7 +8,12 @@ sprite::sprite(const sf::Vector2f &position)
 }
 void sprite::Size(int x, int y)
 {
-   // setSize(sf::Vector2f(x,y));
+    // setSize(sf::Vector2f(x,y));
+}
+
+void sprite::time_r()
+{
+        time.restart();;
 }
 void sprite::Color(sf::Color (col))
 {
@@ -22,6 +29,12 @@ void sprite::loadTexture(const std::string &path)
 bool sprite::ObjectCollision(const sf::Sprite &object,const sf::RenderWindow&wind)
 {
     return getGlobalBounds().intersects(object.getGlobalBounds());
+}
+
+void sprite::Theme()
+{
+
+
 }
 void sprite::Set_Speed(const int &speed_x, const int &speed_y)
 {
