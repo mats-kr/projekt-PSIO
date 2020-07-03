@@ -18,3 +18,5 @@ Każdy pas będzie zapisany jako kolejny krok,prędkość samochodów będzie 2-
 Pojazdy które miały się pojawiać losowo będą obecne od początku rozgrywki lecz ich prędkość będzie znacznie większa od pozostałych(4-5 razy).
 
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
+
+
