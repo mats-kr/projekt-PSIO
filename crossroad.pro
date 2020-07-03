@@ -4,13 +4,14 @@ CONFIG -= app_bundle
 CONFIG -= qt
 CONFIG += console c++17
 SOURCES += \
-        elementysceny.cpp \
-        gracz.cpp \
+        dhlcar.cpp \
+        greencar.cpp \
         main.cpp \
-        pojazd.cpp \
-        pojazd2.cpp \
-        pojazdspecjalny.cpp \
-        pojazdspecjalny2.cpp \
+        menu.cpp \
+        player.cpp \
+        policecar.cpp \
+        redcar.cpp \
+        sceneelements.cpp \
         score.cpp \
         sprite.cpp
         INCLUDEPATH +="C:/Users/User/Desktop/x/lab10/SFML-2.5.1/include"
@@ -24,11 +25,12 @@ SOURCES += \
         }
 
 HEADERS += \
-    elementysceny.h \
-    gracz.h \
-    pojazd.h \
-    pojazd2.h \
-    pojazdspecjalny.h \
-    pojazdspecjalny2.h \
+    dhlcar.h \
+    greencar.h \
+    menu.h \
+    player.h \
+    policecar.h \
+    redcar.h \
+    sceneelements.h \
     score.h \
     sprite.h

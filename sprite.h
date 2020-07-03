@@ -5,12 +5,11 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-
 #include<iostream>
 #include <string>
 #include <ctime>
 
-class sprite: public sf::Sprite
+class Sprite: public sf::Sprite
 {
 protected:
     int LVL=1;
@@ -25,28 +24,18 @@ protected:
     sf::Event event;
     sf::Font font;
     sf::Text text;
-    sf::Music ms;
-
-    void loadTexture(const std::string &path);
+     void loadTexture(const std::string &path);
 
 
 public:
-    explicit sprite(const sf::Vector2f &position);
-    void Set_Bounds(const int& left,const int& right,const int& top,const int& bottom);
-    virtual void Set_Speed( const int& speed_x, const int& speed_y);
-    virtual void New_Position()=0;
-    void Size(int x,int y);
-    virtual void lvl(sf::RenderWindow&wind)=0;
-    virtual void lvl2()=0;
-    //    virtual void InitFont();
-    //    virtual void InitText();
-    void time_r();
-    virtual void Color(sf::Color(col));
+    explicit Sprite(const sf::Vector2f &position);
+    void SetBounds(const int& left,const int& right,const int& top,const int& bottom);
+    virtual void SetSpeed( const int& speed_x, const int& speed_y);    virtual void Lvl(sf::RenderWindow&wind)=0;
+    void TimeReset();
     sf::FloatRect Give_Bounds();
     bool ObjectCollision(const sf::Sprite &object,const sf::RenderWindow &wind);
-void Theme();
-    virtual void Animate()=0;
-    //    virtual void ReverseMove();
+    virtual void Animate(const sf::Time &elapsed)=0;
+    virtual void Start()=0;
 
 
 };

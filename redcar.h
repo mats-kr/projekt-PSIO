@@ -8,16 +8,17 @@
 #include <string>
 #include <ctime>
 #include"sprite.h"
-class Pojazd2: public sprite
+class RedCar: public Sprite
 {
     std::string texturePath = "redcar.PNG";
+    sf::Vector2f speed;
+
 
 public:
-   explicit Pojazd2(const sf::Vector2f &position);
-    void lvl(sf::RenderWindow&wind) final;
-    void lvl2() final;
-    void New_Position()final;
-    void Animate()final;//const int& h,const int& w);
+   explicit RedCar(const sf::Vector2f &position);
+    void Lvl(sf::RenderWindow&wind) final;
+    void Start() final;
+    void Animate(const sf::Time &elapsed)final;//const int& h,const int& w);
 
 
 

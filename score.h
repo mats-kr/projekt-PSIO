@@ -1,19 +1,20 @@
-#ifndef SCORE_H
-#define SCORE_H
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include<iostream>
-#include <string>
-#include <ctime>
-#include"sprite.h"
+//#ifndef SCORE_H
+//#define SCORE_H
+//#include <SFML/Window.hpp>
+//#include <SFML/Graphics.hpp>
+//#include<iostream>
+//#include <string>
+//#include <ctime>
+//#include"sprite.h"
 
-class score:public sprite
-{
-    sf::Font font;
+//class score:public Sprite
+//{
+//    sf::Font font;
 
-public:
-    explicit score(const sf::Vector2f &position);
-    void loadfont();
-};
+//public:
+//    explicit score(const sf::Vector2f &position);
+//    void loadfont();
+//    void displayInfo(sf::RenderWindow&wind);
+//};
 
-#endif // SCORE_H
+//#endif // SCORE_H
