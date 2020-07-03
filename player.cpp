@@ -80,7 +80,7 @@ void Player::Lives(sf::RenderWindow &wind)
     wind.draw(text);
     if(lives<=0)
     {
-        //wind.close();
+        wind.close();
     }
 }
 
@@ -217,7 +217,7 @@ void Player::info(sf::RenderWindow&wind)
         wind.draw(text3);
 
     }
-    if(time.getElapsedTime().asSeconds()>14)
+    if(time.getElapsedTime().asSeconds()>15)
     {
         text3.setString("NORMALNE STEROWANIE");
         text3.setFillColor(sf::Color::Blue);

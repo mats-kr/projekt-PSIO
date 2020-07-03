@@ -156,6 +156,7 @@ int main()
             {
                 sprit->Start();
                 hero.Start();
+                hero.TimeReset();
             }
         }
 

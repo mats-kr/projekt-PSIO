@@ -28,7 +28,16 @@ void SceneElements::displayInfo(sf::RenderWindow &wind)
     opis.setCharacterSize(40);
     opis.setOutlineThickness(10);
 
-    opis.setString("\n ABY ROZPOCZAC GRE WCISNIJ P");
+    opis.setString("\n DABGEROUS ROAD \n"
+                   " GRACZ MUSI PRZEJSC NA DRUGA \n"
+                   " STRONE AUTOSTRADY UNIKAJAC \n"
+                   " KOLIZJI Z INNYMI POJZDAMI. \n"
+                   " KOLIZJA Z POJAZDEM ZWYKLYM \n"
+                   " (CZERWONY LUB ZIELONY \n SAMOCHOD)"
+                   " POWODUJE UTRATE \n JEDNEGO ZYCIA "
+                   " ORAZ COFNIECIE \n NA MIEJSCE STARTU "
+                   " LUB PAS \n BEZPIECZENSTWA. "
+                   " \n \n ABY ROZPOCZAC GRE WCISNIJ { P }");
     wind.draw(opis);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
     {
