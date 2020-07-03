@@ -10,7 +10,6 @@
 #include "redcar.h"
 #include "player.h"
 #include "greencar.h"
-#include "score.h"
 #include "policecar.h"
 #include "dhlcar.h"
 #include "sceneelements.h"
