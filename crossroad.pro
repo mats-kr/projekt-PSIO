@@ -7,12 +7,10 @@ SOURCES += \
         dhlcar.cpp \
         greencar.cpp \
         main.cpp \
-        menu.cpp \
         player.cpp \
         policecar.cpp \
         redcar.cpp \
         sceneelements.cpp \
-        score.cpp \
         sprite.cpp
         INCLUDEPATH +="C:/Users/User/Desktop/x/lab10/SFML-2.5.1/include"
 
@@ -27,10 +25,8 @@ SOURCES += \
 HEADERS += \
     dhlcar.h \
     greencar.h \
-    menu.h \
     player.h \
     policecar.h \
     redcar.h \
     sceneelements.h \
-    score.h \
     sprite.h

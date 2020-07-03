@@ -36,7 +36,10 @@ void SceneElements::displayInfo(sf::RenderWindow &wind)
                    " (CZERWONY LUB ZIELONY \n SAMOCHOD)"
                    " POWODUJE UTRATE \n JEDNEGO ZYCIA "
                    " ORAZ COFNIECIE \n NA MIEJSCE STARTU "
-                   " LUB PAS \n BEZPIECZENSTWA. "
+                   " LUB PAS \n BEZPIECZENSTWA.\n"
+                   " KOLIZJA Z POJAZDEM SPECJALNYM\n"
+                   " POWODUJE POWRÓT NA MIEJSCE \n STARTU"
+                   " ORAZ UTRATE 5 ZYC \n  "
                    " \n \n ABY ROZPOCZAC GRE WCISNIJ { P }");
     wind.draw(opis);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
