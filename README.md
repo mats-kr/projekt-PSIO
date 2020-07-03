@@ -16,7 +16,11 @@ Na poniższym przykładzie gracz jest oznaczony jako "strzałka"
 Każdy pas będzie zapisany jako kolejny krok,prędkość samochodów będzie 2-3 razy większa od prędkości bohatera(wartość ta będzie wzrastać wraz z kolejnymi poziomami,oczywiście tak aby rozgrywka była możliwa)
 
 Pojazdy które miały się pojawiać losowo będą obecne od początku rozgrywki lecz ich prędkość będzie znacznie większa od pozostałych(4-5 razy).
+Zmiana sterowania nastąpi co 10 sekund i beędzie trwać przez 5 sekund
 
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
+
+
+
 
 
