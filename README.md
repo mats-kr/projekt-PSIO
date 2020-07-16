@@ -20,6 +20,13 @@ Zmiana sterowania nastąpi co 10 sekund i beędzie trwać przez 5 sekund
 
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
 
+# KLASY:
+ Player
+ * Animate()- odpowiada za animacje gracza
+ * checkCollision()- sprawdza kolizje z poszczegolnymi obiektami
+ * Start()- Nadaje bochaterowi wartości umożliwiajace poruszanie
+ * LvL_Counter() - Wyświetla numer poziomu na którym znajduje sie gracz
+ * 
 
 
 
