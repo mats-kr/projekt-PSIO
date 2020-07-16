@@ -1,4 +1,7 @@
 Dangerous Road
+Gracz musi przejść przez autostradę uikajac kolizji z pojazdami. Przemieszczanie gracza odbywa się za pomocą klawiszy W,S,A,D.
+
+
 Gra polegająca na pokonaniu przez gracza "autostrady" w poprzek(od bottom do top) .Gracz będzie musiał unikać samochodów jadących z obydwu stron[ 5-8(ilość ta może ulec zmianie w procesie pisania) pasów z samochodami początkowo jadącymi w lewo,5-8 pasów z samochodami początkowo jadącymi w prawo].
 Plansza będzie się składała z siatki pól, gracz sterowany klawiszami w,a,s,d lub "strzałkami" będzie się przemieszczał z pola na pole o stałą odległość(możiwość ruchu góra,dół,prawo,lewo). Samochodu będą poruszać się ze stałą prędkością z pola na pole od jednej krawędzi ekranu do drugiej
 (przy udeżeniu w krawędź zmieniac sie będzie prędkosć X i Y na wartości przeciwne aby pojazd wrócił na ten sam tor ruchu).Pomiędzy 5 pasami będzie pas bezpieczeństwa ciągnący się na całą szerokośc ekranu gdzie gracz będzie mógł odpocząć.
@@ -21,12 +24,16 @@ Zmiana sterowania nastąpi co 10 sekund i beędzie trwać przez 5 sekund
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
 
 # KLASY:
- Player
- * Animate()- odpowiada za animacje gracza
+# Player
+ * Animate()- odpowiada za "normalne" pouszanie gracza tj. w-ruch do góry,s-ruch w dół,a-ruch w lewo,d-ruch w prawo
  * checkCollision()- sprawdza kolizje z poszczegolnymi obiektami
  * Start()- Nadaje bochaterowi wartości umożliwiajace poruszanie
  * LvL_Counter() - Wyświetla numer poziomu na którym znajduje sie gracz
- * 
+ * Move()- W zależności od czasu decyduje o sposobie poruszania gracza
+ * LvlUpdate()-Aktualizuje poziom,oraz przywraca gracza na pozycje startu
+ * Zycia()-Aktualizuje liczbę żyć gracza oraz kończy ge jeśli gracz utraci wszystkie zycia 
+ * ReverseAnimate()-odpowiada za "odwrócone" poruszanie tj. naciśnięcie któregokolwiek z klawiszy w,s,a,d daje przeciwny efekt niż w funkcji Animate()
+ *
 
 
 
