@@ -1,5 +1,16 @@
 Dangerous Road
-Gracz musi przejść przez autostradę uikajac kolizji z pojazdami. Przemieszczanie gracza odbywa się za pomocą klawiszy W,S,A,D.
+Gracz musi przejść przez autostradę składającą się z 16 pasów uikajac kolizji z pojazdami. Przemieszczanie bohatera odbywa się za pomocą klawiszy W,S,A,D. Aby ukończyc poziom gracz musi się przemieścić z pozycji startowej:
+
+![](textury/dolnypas.png) 
+
+do końca poziomu:
+
+![](textury/END.png) 
+
+Przeszkodę stanowią samochody których kolizja z graczem powoduje utrate żyć oraz powrót na pozycje startową lub pas bezpieczeństwa.
+Kolizja z policeCar oraz dhlCar powoduje utratę 5 żyć oraz powrót gracza na pozycje startową , a kolizja z recCar oraz greenCar powoduje utratę jednego życia i powrót na 
+pozycje startową(redCar) lub pas bezpieczeństwa(greenCar).Po ukończeniu poziomu gracz wraca na pozycje startową, a pojazdy przyspieszają o ustaloną wartość.
+Po rozpoczęciu gry przez 10s gracz porusza sie "normalnie" tj.naciśniecie W-ruch do góry, naciśnięcie S-ruch w dół itd. Po upływie 10s sterowanie odwraca się na czas 5s.
 
 
 Gra polegająca na pokonaniu przez gracza "autostrady" w poprzek(od bottom do top) .Gracz będzie musiał unikać samochodów jadących z obydwu stron[ 5-8(ilość ta może ulec zmianie w procesie pisania) pasów z samochodami początkowo jadącymi w lewo,5-8 pasów z samochodami początkowo jadącymi w prawo].
@@ -33,7 +44,10 @@ Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
  * LvlUpdate()-Aktualizuje poziom,oraz przywraca gracza na pozycje startu
  * Zycia()-Aktualizuje liczbę żyć gracza oraz kończy ge jeśli gracz utraci wszystkie zycia 
  * ReverseAnimate()-odpowiada za "odwrócone" poruszanie tj. naciśnięcie któregokolwiek z klawiszy w,s,a,d daje przeciwny efekt niż w funkcji Animate()
- *
+ 
+ # Vehicle
+ * Lvl()-zwiększa prędkość pojazdów wraz z wzrostem poziomu
+ * 
 
 
 
