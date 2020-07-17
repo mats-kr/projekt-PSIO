@@ -78,23 +78,23 @@ poziomów-kto zajdzie dalej ,ten lepszy.
   
   * GreenCar
   
-   ![](textury/greencar.png)
+  ![](textury/greencar.png)
   
   * DhlCar
   
-   ![](textury/DHL.png)
+  ![](textury/DHL.png)
     
   * PoliceCar
   
-    ![](textury/policja.png)
+  ![](textury/policja.png)
     
   * Player
   
-    ![](textury/PIX2.png)
+  ![](textury/PIX2.png)
     
   * Start gry
   
-    ![](textury/dolnypas.png)
+  ![](textury/dolnypas.png)
     
   * Pas bezpieczeństwa
   
