@@ -35,8 +35,6 @@ private:
 public:
     Scene();
     void RenderGame();
-    void Play(sf::Time &elapsed,std::vector<std::shared_ptr<Vehicle>>&vector,Player&object,sf::RenderWindow&window,SceneElements&object2);
-    void Start(sf::Event&event,std::vector<std::shared_ptr<Vehicle>>&name,Player&object);
     void drawObjects(SceneElements&obj1,SceneElements&obj2,SceneElements&obj3,SceneElements&obj4,
                      SceneElements&obj5,SceneElements&obj6,SceneElements&obj7,SceneElements&obj8,SceneElements&obj9);
     void CreateObjects();
