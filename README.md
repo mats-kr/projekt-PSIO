@@ -52,24 +52,24 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 
  
  # SceneElements-Klasa główna odpowiadająca za elementy sceny takie jak granice, pas bezpieczeństwa oraz droga
- * Render()-Funkcja odpowiadająca za rysowanie obiektów
- * RenderInfo()-Funkcja odpowiadająca za wyświetlenie informacji
- * RestartTime()-Funkcja odpowiadająca za resetowanie czasu
- * LoadTexture()-Funkcja odpowiadająca za wczytanie tekstury
+ * Render()-Metoda odpowiadająca za rysowanie obiektów
+ * RenderInfo()-Metoda odpowiadająca za wyświetlenie informacji
+ * RestartTime()-Metoda odpowiadająca za resetowanie czasu
+ * LoadTexture()-Metoda odpowiadająca za wczytanie tekstury
  
  # SceneLabels-Podklasa klasy SceneElements
- * DisplayInstructions()-Funkcja odpowiadająca za instrukcje na początku gry
- * MoveInfo()-Funkcja odpowiadająca za informacje o sposobie poruszania
- * DrawObject()-Funkcja odpowiadająca za przekazanie obiketu do narysowania
- * Render()-Funkcja odpowiadająca za wyświetlenie pierwszych dwóch funkcji
- * LoadFont()-Funkcja odpowiadająca za wczytanie znaków tekstowych
+ * DisplayInstructions()-Metoda odpowiadająca za instrukcje na początku gry
+ * MoveInfo()-Metoda odpowiadająca za informacje o sposobie poruszania
+ * DrawObject()-Metoda odpowiadająca za przekazanie obiketu do narysowania
+ * Render()- odpowiadająca za wyświetlenie pierwszych dwóch funkcji
+ * LoadFont()-Metoda odpowiadająca za wczytanie znaków tekstowych
  
   # SceneBorder-Podklasa klasy SceneElements odpowiadająca za miejsce startu gry,pas bezpieczeństwa oraz miejsce końca gry
  * RenderInfo()-Analogicznie do SceneElements
- * Render()-nalogicznie do SceneElements
+ * Render()-Analogicznie do SceneElements
  
  # Road-Podklasa klasy SceneElements odpowiadająca za Drogę
- * Render()-Funkcja odpowiadająca za rysowanie obiektu
+ * Render()-Metoda odpowiadająca za rysowanie obiektu
  
  
  # Reprezentacja graficzna obiektów
