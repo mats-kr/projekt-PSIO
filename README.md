@@ -97,6 +97,9 @@ poziomów-kto zajdzie dalej ,ten lepszy.
   * Punkt końca gry
     ![](textury/END.png)
 
+  * Autostrada
+    ![](textury/droga4.png)
+
 
 
 
