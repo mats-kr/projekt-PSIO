@@ -1,26 +1,15 @@
-#ifndef POJAZD_H
-#define POJAZD_H
+#ifndef GREENCAR_H
+#define GREENCAR_H
 
+#include"vehicle.h"
 
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include<iostream>
-#include <string>
-#include <ctime>
-#include"sprite.h"
-class GreenCar: public Sprite
+class GreenCar: public Vehicle
 {
 private:
     std::string texturePath = "greencar.PNG";
-    sf::Vector2f speed;
 public:
-    GreenCar(const sf::Vector2f &position);
-    void Start() final;
-    void Lvl(sf::RenderWindow&wind) final;
-
-    void Animate(const sf::Time &elapsed)final;//const int& h,const int& w);
-
-
+    explicit GreenCar(const sf::Vector2f &position,const int&ac,const int&start);
+    void Animate(const sf::Time &elapsed)final;
 };
 
-#endif // POJAZD_H
+#endif // GREENCAR_H

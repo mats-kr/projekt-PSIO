@@ -1,25 +1,16 @@
-#ifndef POJAZDSPECJALNY_H
-#define POJAZDSPECJALNY_H
+#ifndef POLICECAR_H
+#define POLICECAR_H
 
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include<iostream>
-#include <string>
-#include <ctime>
-#include"sprite.h"
-class PoliceCar:public Sprite
+#include"vehicle.h"
+
+class PoliceCar:public Vehicle
 {
-    sf::Vector2f speed;
+private:
     std::string texturePath = "policja.PNG";
-
 public:
-   explicit PoliceCar(const sf::Vector2f &position);
-    void Start()final;
-    void Lvl(sf::RenderWindow&wind) final;
-
-
-    void Animate(const sf::Time &elapsed)final;//const int& h,const int& w);
+    explicit PoliceCar(const sf::Vector2f &position,const int&ac,const int&start);
+    void Animate(const sf::Time &elapsed)final;
 
 };
 
-#endif // POJAZDSPECJALNY_H
+#endif // POLICECAR_H

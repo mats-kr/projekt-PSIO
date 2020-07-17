@@ -1,54 +1,30 @@
-#ifndef ELEMENTYSCENY_H
-#define ELEMENTYSCENY_H
+#ifndef SCENEELEMENTS_H
+#define SCENEELEMENTS_H
 
-
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
 #include"sprite.h"
-class SceneElements:public Sprite
+
+class SceneElements:public sf::Sprite
 {
-    sf::Texture entrace;
-    sf::Texture exit;
-    sf::Texture safetyroad;
-    sf::Texture end;
-    sf::Texture screenend;
-    sf::Texture texture2;
-    sf::Font font;
-    sf::Text livescounter;
+protected:
+    sf::Text livesCounter;
     sf::Text lvl;
+    sf::Text description;
+    sf::Texture texture;
     sf::Vector2f speed;
-    sf::Text opis;
-    std::string texturePath2 = "CJ2.PNG";
-    sf::Sprite background;
+    sf::Sprite roadSprite;
+    sf::Sprite sprite;
     sf::Texture back;
-
-
-
+    sf::Clock time;
+    sf::Texture roadTexture;
+    void loadTexture(const std::string &path);
 public:
-    explicit SceneElements(const sf::Vector2f &position);
-    void Lvl(sf::RenderWindow&wind);
-    void Lvl2 ();
-    void Animate(const sf::Time &elapsed);
-    void renderEnter(sf::RenderWindow&wind);
-    void renderExit(sf::RenderWindow&wind);
-    void renderLaine(sf::RenderWindow&wind);
-    void renderEnd(sf::RenderWindow&wind);
-    void renderScreenEnd(sf::RenderWindow&wind);
-    void renderStart(sf::RenderWindow&wind);
-    void renderRoad(sf::RenderWindow&wind);
-    void renderLivesString(sf::RenderWindow&wind);
-    void renderLvlString(sf::RenderWindow&wind);
-    void displayInfo(sf::RenderWindow&wind);
-    void Theme();
-    void MenuBackground(sf::RenderWindow &wind);
-    void Start()final;
-    void loadfont();
-
-
-
+    explicit SceneElements(sf::RenderWindow&wind ,const std::string &path,const int& posX,const int& posY,const int & rectY ,const bool & check,const int &x);
+    virtual void Render(sf::RenderWindow&wind)=0;
+    virtual void RenderInfo(sf::RenderWindow&wind)=0;
+    virtual void Draw(sf::RenderWindow&wind,sf::Sprite&obj);
+    void RestartTime();
 
 
 };
 
-#endif // ELEMENTYSCENY_H
+#endif // SCENEELEMENTS_H
