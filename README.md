@@ -1,14 +1,7 @@
 # Dangerous Road
-Gracz musi przejść przez autostradę składającą się z 16 pasów uikajac kolizji z pojazdami. Przemieszczanie bohatera odbywa się za pomocą klawiszy W,S,A,D. Aby ukończyc poziom gracz musi się przemieścić z pozycji startowej:
-
-![](textury/dolnypas.png) 
-
-do końca poziomu:
-
-![](textury/END.png) 
-
-Przeszkodę stanowią samochody których kolizja z graczem powoduje utrate żyć oraz powrót na pozycje startową lub pas bezpieczeństwa.
-Kolizja z policeCar oraz dhlCar powoduje utratę 5 żyć oraz powrót gracza na pozycje startową , a kolizja z recCar oraz greenCar powoduje utratę jednego życia i powrót na 
+Gracz startujący z 10 życiami musi przejść przez autostradę składającą się z 16 pasów uikajac kolizji z pojazdami. Przemieszczanie bohatera odbywa się za pomocą klawiszy W,S,A,D. Aby ukończyc poziom gracz musi się przemieścić z pozycji startowej do końca poziomu, z możliwością odpoczynku na "Pasie bezpieczeństwa". Przeszkodę stanowią samochody
+(jadące z prawej do lewej-DhlCar oraz RedCar, jadące z lewej do prawej-policeCar oraz GreenCar) których kolizja z graczem powoduje utrate żyć oraz powrót na pozycje startową lub pas bezpieczeństwa.
+Kolizja z PoliceCar oraz DhlCar powoduje utratę 5 żyć oraz powrót gracza na pozycje startową , a kolizja z RedCar oraz GreenCar powoduje utratę jednego życia i powrót na 
 pozycje startową(redCar) lub pas bezpieczeństwa(greenCar).Po ukończeniu poziomu gracz wraca na pozycje startową, a pojazdy przyspieszają o ustaloną wartość.
 Po rozpoczęciu gry przez 10s gracz porusza sie "normalnie" tj.naciśniecie W-ruch do góry, naciśnięcie S-ruch w dół itd. Po upływie 10s sterowanie odwraca się na czas 5s.
 
@@ -35,39 +28,71 @@ Zmiana sterowania nastąpi co 10 sekund i beędzie trwać przez 5 sekund
 Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
 
 # KLASY:
-# Player
- * Animate()- odpowiada za "normalne" pouszanie gracza tj. w-ruch do góry,s-ruch w dół,a-ruch w lewo,d-ruch w prawo
- * checkCollision()- sprawdza kolizje z poszczegolnymi obiektami
- * Start()- Nadaje bochaterowi wartości umożliwiajace poruszanie
- * LvL_Counter() - Wyświetla numer poziomu na którym znajduje sie gracz
+# Player-Klasa odpowiadająca za gracza
+ * Animate()- Metoda odpowiadająca za "normalne" pouszanie gracza tj. w-ruch do góry,s-ruch w dół,a-ruch w lewo,d-ruch w prawo
+ * checkCollision()- Metoda odpowiadająca zasprawdzenie kolizji z poszczegolnymi obiektami
+ * Start()- Metoda odpowiadająca za nadanie bochaterowi wartości umożliwiajace poruszanie
+ * LvL_Counter() -Metoda odpowiadająca za wyświetlenie numeru poziomu na którym znajduje sie gracz
  * Move()- W zależności od czasu decyduje o sposobie poruszania gracza
- * LvlUpdate()-Aktualizuje poziom,oraz przywraca gracza na pozycje startu
- * Zycia()-Aktualizuje liczbę żyć gracza oraz kończy ge jeśli gracz utraci wszystkie zycia 
- * ReverseAnimate()-odpowiada za "odwrócone" poruszanie tj. naciśnięcie któregokolwiek z klawiszy w,s,a,d daje przeciwny efekt niż w funkcji Animate()
+ * LvlUpdate()-Metoda odpowiadająca za aktualizacje poziou,oraz przywracanie gracza na pozycje startu
+ * Zycia()-Metoda odpowiadająca za aktualizacje liczby żyć gracza oraz skończenie gry jeśli gracz utraci wszystkie zycia 
+ * ReverseAnimate()-Metoda odpowiadająca za "odwrócone" poruszanie tj. naciśnięcie któregokolwiek z klawiszy w,s,a,d daje przeciwny efekt niż w funkcji Animate()
  
- # Vehicle
- * Lvl()-zwiększa prędkość pojazdów wraz z wzrostem poziomu
- * Start()-najadę początkową predkość
+ # Vehicle-Klasa główna odpowiadająca za pojazdy
+ * Lvl()-Metoda odpowiadająca za zwiększenie prędkości pojazdów wraz z wzrostem poziomu
+ * Start()-Metoda odpowiadająca za nadanie początkowej predkości
  
- # Road
- * Render()-Odpowiada za narysowanie drogi
+  # GreenCar-Podklasa klasy Vehicle
+ * Animate()-Metoda odpowiadająca za pouszanie się samochodów
  
- # SceneElements
- * Render()
- * Draw()-Funkcja przekazująca obikety do narysowania
+ # DhlCar-Podklasa klasy Vehicle
+ * Analogicznie do Greencar
  
- # Sprite
- * SetBounds()-Funkcja pobierajaca informacje o wymiarach ekranu
- * TimeReset()-Funkcja restartująca czas
- * GiveBounds()-Funkcja zwracająca granice obiektów
- * MoveSound()-Funkcja odpowiadająca za dzwięk poruszania gracza
- * HitSound()-Funkcja odpowiadająca za dzwiek kolizji gracza z samochodem
- * NextLvlSound()-Funkcja odpowiadająca za dzwięk ukończenia poziomu
- * ObjectColission()-Fnunkcja odpowiadająca za kolizje z samochodami
- * Animate()-Funkcja odpowiadająca za poruszanie
- * Start()-Fukcja odpowiadająca za nadanie pocztkowej prędkości
+ # PoliceCar-Podklasa klasy Vehicle
+ * Analogicznie do GreenCar
  
+ # RedCar-Podklasa klasy Vehicle
+ * Analogicznie do GreenCar
+ 
+ 
+ 
+ # Sprite-Klasa główna po której dziedziczą klasy Player oraz Vehicle
+ * SetBounds()-Metoda odpowiadająca za pobranie informacji o wymiarach ekranu
+ * TimeReset()-Metoda odpowiadająca za reset czasu
+ * GiveBounds()-Metoda odpowiadająca za zwrócenie granic obiektów
+ * MoveSound()-Metoda odpowiadająca za dzwięk poruszania gracza
+ * HitSound()-Metoda odpowiadająca za dzwiek kolizji gracza z samochodem
+ * NextLvlSound()-Metoda odpowiadająca za dzwięk ukończenia poziomu
+ * ObjectColission()-Metoda odpowiadająca za kolizje z samochodami
+ * Animate()-Metoda odpowiadająca za poruszanie
+ * Start()-Metoda odpowiadająca za nadanie pocztkowej prędkości
  
 
+ 
+ # SceneElements-Klasa główna odpowiadająca za elementy sceny takie jak granice, pas bezpieczeństwa oraz droga
+ * Render()-Funkcja odpowiadająca za rysowanie obiektów
+ * RenderInfo()-Funkcja odpowiadająca za wyświetlenie informacji
+ * RestartTime()-Funkcja odpowiadająca za resetowanie czasu
+ * LoadTexture()-Funkcja odpowiadająca za wczytanie tekstury
+ 
+ # SceneLabels-Podklasa klasy SceneElements
+ * DisplayInstructions()-Funkcja odpowiadająca za instrukcje na początku gry
+ * MoveInfo()-Funkcja odpowiadająca za informacje o sposobie poruszania
+ * DrawObject()-Funkcja odpowiadająca za przekazanie obiketu do narysowania
+ * Render()-Funkcja odpowiadająca za wyświetlenie pierwszych dwóch funkcji
+ * LoadFont()-Funkcja odpowiadająca za wczytanie znaków tekstowych
+ 
+  # SceneBorder-Podklasa klasy SceneElements odpowiadająca za miejsce startu gry,pas bezpieczeństwa oraz miejsce końca gry
+ * RenderInfo()-Analogicznie do SceneElements
+ * Render()-nalogicznie do SceneElements
+ 
+ # Road-Podklasa klasy SceneElements odpowiadająca za Drogę
+ * Render()-Funkcja odpowiadająca za rysowanie obiektu
+ 
+ 
+ 
+ 
+ 
+ 
 
 
