@@ -28,7 +28,6 @@ CONFIG(debug, debug|release)
 LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-network-d -lsfml-system-d -lsfml-window-d
 }
 
-
 HEADERS += \
     dhlcar.h \
     greencar.h \
