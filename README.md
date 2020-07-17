@@ -72,7 +72,7 @@ poziomów-kto zajdzie dalej ,ten lepszy.
  
  # Reprezentacja graficzna obiektów
  * RedCar 
- ![](texstury/redcar.png)
+ ![](tekstury/redcar.png)
  
  
  
