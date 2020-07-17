@@ -1,12 +1,11 @@
 #include "scene.h"
 
-Scene::Scene():window(sf::VideoMode(900, 1000),"sfd")
+Scene::Scene():window(sf::VideoMode(900, 1000),"Dangerous Road")
 {
     window.setFramerateLimit(60);
 }
 void Scene::RenderGame()
 {
-    sf::RenderWindow window(sf::VideoMode(900, 1000),"sfd");
     window.setFramerateLimit(60);
 
     Player Hero(sf::Vector2f(window.getSize().x/2,950));
