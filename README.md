@@ -8,9 +8,6 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 
 # [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
 
-# Screen rozgrywki
-
-  ![](textury/screen.jpg)
 
 
 
@@ -117,6 +114,9 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 
 
 
+# Screen rozgrywki
+
+  ![](textury/screen.jpg)
 
 
 
