@@ -9,6 +9,8 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 # [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
 
 
+
+
 # KLASY:
 # Player-Klasa odpowiadająca za gracza
  * Animate()- Metoda odpowiadająca za "normalne" pouszanie gracza tj. w-ruch do góry,s-ruch w dół,a-ruch w lewo,d-ruch w prawo
@@ -112,6 +114,9 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 
 
 
+# Screen rozgrywki
+
+  ![](textury/screen.jpg)
 
 
 
