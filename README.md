@@ -78,17 +78,13 @@ poziomów-kto zajdzie dalej ,ten lepszy.
   
   * GreenCar
   
-  
-  ![](textury/greencar.png)
-  
+   ![](textury/greencar.png)
   
   * DhlCar
   
-  
-    ![](textury/DHL.png)
+   ![](textury/DHL.png)
     
   * PoliceCar
-  
   
     ![](textury/policja.png)
     
@@ -101,13 +97,16 @@ poziomów-kto zajdzie dalej ,ten lepszy.
     ![](textury/dolnypas.png)
     
   * Pas bezpieczeństwa
-    ![](textury/pas.png)
+  
+  ![](textury/pas.png)
     
   * Punkt końca gry
-    ![](textury/END.png)
+  
+  ![](textury/END.png)
 
   * Autostrada
-    ![](textury/droga4.png)
+  
+  ![](textury/droga4.png)
 
 
 
