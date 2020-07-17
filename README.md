@@ -12,7 +12,7 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 # KLASY:
 # Player-Klasa odpowiadająca za gracza
  * Animate()- Metoda odpowiadająca za "normalne" pouszanie gracza tj. w-ruch do góry,s-ruch w dół,a-ruch w lewo,d-ruch w prawo
- * checkCollision()- Metoda odpowiadająca zasprawdzenie kolizji z poszczegolnymi obiektami
+ * CheckCollision()- Metoda odpowiadająca zasprawdzenie kolizji z poszczegolnymi obiektami
  * Start()- Metoda odpowiadająca za nadanie bochaterowi wartości umożliwiajace poruszanie
  * LvL_Counter() -Metoda odpowiadająca za wyświetlenie numeru poziomu na którym znajduje sie gracz
  * Move()- W zależności od czasu decyduje o sposobie poruszania gracza
