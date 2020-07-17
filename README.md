@@ -59,7 +59,7 @@ poziomów-kto zajdzie dalej ,ten lepszy.
  * RestartTime()-Metoda odpowiadająca za resetowanie czasu
  * LoadTexture()-Metoda odpowiadająca za wczytanie tekstury
  
- # SceneLabels-Podklasa klasy SceneElements
+ # SceneLabels-Podklasa klasy SceneElements odpowiadająca za napisy
  * DisplayInstructions()-Metoda odpowiadająca za instrukcje na początku gry
  * MoveInfo()-Metoda odpowiadająca za informacje o sposobie poruszania
  * DrawObject()-Metoda odpowiadająca za przekazanie obiketu do narysowania
