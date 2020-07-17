@@ -8,6 +8,11 @@ poziomów-kto zajdzie dalej ,ten lepszy.
 
 # [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
 
+# Screen rozgrywki
+
+  ![](textury/screen.jpg)
+
+
 
 # KLASY:
 # Player-Klasa odpowiadająca za gracza
