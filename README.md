@@ -108,7 +108,7 @@ poziomów-kto zajdzie dalej ,ten lepszy.
   
   ![](textury/droga4.png)
 
-
+# [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
 
 
 
