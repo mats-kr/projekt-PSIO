@@ -47,8 +47,27 @@ Gracz zakończy poziom po osiąnięciu danego punktu po drugiej stronie planszy.
  
  # Vehicle
  * Lvl()-zwiększa prędkość pojazdów wraz z wzrostem poziomu
- * 
-
+ * Start()-najadę początkową predkość
+ 
+ # Road
+ * Render()-Odpowiada za narysowanie drogi
+ 
+ # SceneElements
+ * Render()
+ * Draw()-Funkcja przekazująca obikety do narysowania
+ 
+ # Sprite
+ * SetBounds()-Funkcja pobierajaca informacje o wymiarach ekranu
+ * TimeReset()-Funkcja restartująca czas
+ * GiveBounds()-Funkcja zwracająca granice obiektów
+ * MoveSound()-Funkcja odpowiadająca za dzwięk poruszania gracza
+ * HitSound()-Funkcja odpowiadająca za dzwiek kolizji gracza z samochodem
+ * NextLvlSound()-Funkcja odpowiadająca za dzwięk ukończenia poziomu
+ * ObjectColission()-Fnunkcja odpowiadająca za kolizje z samochodami
+ * Animate()-Funkcja odpowiadająca za poruszanie
+ * Start()-Fukcja odpowiadająca za nadanie pocztkowej prędkości
+ 
+ 
 
 
 
