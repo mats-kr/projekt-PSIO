@@ -11,7 +11,7 @@ void Scene::RenderGame()
     Player Hero(sf::Vector2f(window.getSize().x/2,950));
     Hero.SetBounds(0,window.getSize().x,0,window.getSize().y);
 
-    RenderObjects();
+    CreateObjects();
 
     sf::RectangleShape GameEnd;
     GameEnd.setSize(sf::Vector2f(30,30));
@@ -20,7 +20,6 @@ void Scene::RenderGame()
 
     while (window.isOpen())
     {
-        sf::Time elapsed = clock.restart();
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed||sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
@@ -29,59 +28,14 @@ void Scene::RenderGame()
 
         window.clear(sf::Color::Black);
 
-        for(auto&elements:Elements)
-        {
-            elements->Render(window);
-        }
 
-        Hero.Move(window,elapsed);
-        Hero.Lives(window);
-        window.draw(Hero);
-        window.draw(GameEnd);
-        Hero.LvlCounter(window);
-
-        for (auto &sprit:Vehicles)
-        {
-            window.draw(*sprit);
-            sprit->Animate(elapsed);
-            Hero.checkCollision(*sprit,window);
-        }
-        if(Hero.GiveBounds().intersects(GameEnd.getGlobalBounds()))
-        {
-            Hero.LvlUpdate(window);
-            for(auto &sprite:Vehicles)
-            {
-                Hero.Movesound();
-                Hero.Nextlvlsound();
-                sprite->Lvl(window);
-            }
-            for(auto&elements:Elements)
-            {
-                elements->RestartTime();
-            }
-        }
-        if(event.key.code==sf::Keyboard::P==true)
-        {
-            for(auto &sprit:Vehicles)
-            {
-                sprit->Start();
-                Hero.Start();
-                Hero.TimeReset();
-                sprit->TimeReset();
-            }
-            for(auto&elements:Elements)
-            {
-                elements->RestartTime();
-            }
-        }
-        for(auto&elements:Elements)
-        {
-            elements->RenderInfo(window);
-        }
+        AnimateObjects(Hero,GameEnd);
+        DrawObjects(Hero,GameEnd);
         window.display();
     }
 }
-void Scene::RenderObjects()
+
+void Scene::CreateObjects()
 {
     for (int i = 0; i < 8; i++)
     {
@@ -106,5 +60,72 @@ void Scene::RenderObjects()
     Elements.push_back(std::make_shared<SceneBorder>(window,"END.PNG",410,1000,50,true,800));
     Elements.push_back(std::make_shared<SceneLabels>(window,"POZIOM:",7,sf::Color::Cyan,17,27,false,0));
     Elements.push_back(std::make_shared<SceneLabels>(window,"ZYCIA:",710,sf::Color::Green,17,30,false,0));
+}
+
+void Scene::DrawObjects(Player&Hero,sf::RectangleShape&GameEnd)
+{
+
+    for(auto&elements:Elements)
+    {
+        elements->Render(window);
+    }
+
+    Hero.Lives(window);
+    window.draw(Hero);
+    window.draw(GameEnd);
+    Hero.LvlCounter(window);
+
+    for (auto &sprit:Vehicles)
+    {
+        window.draw(*sprit);
+
+    }
+
+    for(auto&elements:Elements)
+    {
+        elements->RenderInfo(window);
+    }
+}
+
+void Scene::AnimateObjects(Player&Hero,sf::RectangleShape&GameEnd)
+{
+    sf::Time elapsed = clock.restart();
+
+    Hero.Move(window,elapsed);
+
+    for (auto &sprit:Vehicles)
+    {
+
+        sprit->Animate(elapsed);
+        Hero.checkCollision(*sprit,window);
+    }
+    if(Hero.GiveBounds().intersects(GameEnd.getGlobalBounds()))
+    {
+        Hero.LvlUpdate(window);
+        for(auto &sprite:Vehicles)
+        {
+            Hero.Movesound();
+            Hero.Nextlvlsound();
+            sprite->Lvl(window);
+        }
+        for(auto&elements:Elements)
+        {
+            elements->RestartTime();
+        }
+    }
+    if(event.key.code==sf::Keyboard::P==true)
+    {
+        for(auto &sprit:Vehicles)
+        {
+            sprit->Start();
+            Hero.Start();
+            Hero.TimeReset();
+            sprit->TimeReset();
+        }
+        for(auto&elements:Elements)
+        {
+            elements->RestartTime();
+        }
+    }
 }
 
