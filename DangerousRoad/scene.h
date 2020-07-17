@@ -39,9 +39,10 @@ public:
     void Start(sf::Event&event,std::vector<std::shared_ptr<Vehicle>>&name,Player&object);
     void drawObjects(SceneElements&obj1,SceneElements&obj2,SceneElements&obj3,SceneElements&obj4,
                      SceneElements&obj5,SceneElements&obj6,SceneElements&obj7,SceneElements&obj8,SceneElements&obj9);
-    void RenderObjects();
+    void CreateObjects();
     void steeringLoop(Player&object,sf::RectangleShape&object2,sf::Event&event,sf::Time&elapsed);
-
+    void DrawObjects(Player&Hero,sf::RectangleShape&GameEnd);
+    void AnimateObjects(Player&Hero,sf::RectangleShape&GameEnd);
 };
 
 #endif // SCENE_H
