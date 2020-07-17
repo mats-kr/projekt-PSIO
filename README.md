@@ -6,6 +6,8 @@ pozycje startową(redCar) lub pas bezpieczeństwa(greenCar).Po rozpoczęciu gry 
 poziomów-kto zajdzie dalej ,ten lepszy.
 
 
+# [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
+
 
 # KLASY:
 # Player-Klasa odpowiadająca za gracza
@@ -108,7 +110,7 @@ poziomów-kto zajdzie dalej ,ten lepszy.
   
   ![](textury/droga4.png)
 
-# [Link do prezentacji gry](https://youtu.be/w0_-BrjkOYk)
+
 
 
 
