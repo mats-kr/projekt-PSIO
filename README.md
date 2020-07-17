@@ -72,23 +72,32 @@ poziomów-kto zajdzie dalej ,ten lepszy.
  
  # Reprezentacja graficzna obiektów
  * RedCar 
+ 
   ![](textury/redcar.png)
   
   
   * GreenCar
+  
+  
   ![](textury/greencar.png)
   
   
   * DhlCar
+  
+  
     ![](textury/DHL.png)
     
   * PoliceCar
+  
+  
     ![](textury/policja.png)
     
   * Player
+  
     ![](textury/PIX2.png)
     
   * Start gry
+  
     ![](textury/dolnypas.png)
     
   * Pas bezpieczeństwa
